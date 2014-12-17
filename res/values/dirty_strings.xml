@@ -103,4 +103,7 @@
 
     <!-- App Ops summary -->
     <string name="app_ops_settings_summary">View or change advanced app permissions</string>
+
+    <!-- Volume settings - Volume adjustment sound -->
+    <string name="volume_adjust_sounds_title">Volume adjustment sounds</string>
 </resources>
