@@ -44,6 +44,7 @@ import com.android.systemui.qs.tiles.RotationLockTile;
 import com.android.systemui.qs.tiles.ScreenshotTile;
 import com.android.systemui.qs.tiles.ThemeTile;
 import com.android.systemui.qs.tiles.SmartPixelsTile;
+import com.android.systemui.qs.tiles.SoundTile;
 import com.android.systemui.qs.tiles.UserTile;
 import com.android.systemui.qs.tiles.WifiTile;
 import com.android.systemui.qs.tiles.WorkModeTile;
@@ -79,6 +80,7 @@ public class QSFactoryImpl implements QSFactory {
         else if (tileSpec.equals("nfc")) return new NfcTile(mHost);
         else if (tileSpec.equals("reboot")) return new RebootTile(mHost);
         else if (tileSpec.equals("screenshot")) return new ScreenshotTile(mHost);
+        else if (tileSpec.equals("sound")) return new SoundTile(mHost);
         else if (tileSpec.equals("caffeine")) return new CaffeineTile(mHost);
         else if (tileSpec.equals("navigation")) return new NavigationBarTile(mHost);
         else if (tileSpec.equals("theme")) return new ThemeTile(mHost);
