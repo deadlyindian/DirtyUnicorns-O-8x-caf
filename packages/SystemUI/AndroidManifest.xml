@@ -213,6 +213,8 @@
     <uses-permission android:name="android.permission.SHUTDOWN" />
     <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
 
+    <protected-broadcast android:name="android.intent.action.SCREEN_STATE_SERVICE_UPDATE" />
+
     <application
         android:name=".SystemUIApplication"
         android:persistent="true"
@@ -288,6 +290,13 @@
 
         <service android:name=".CPUInfoService"
                 android:exported="true" />
+
+        <service android:name=".screenstate.ScreenStateService"
+                android:exported="true" >
+            <intent-filter>
+               <action android:name="android.intent.action.SCREEN_STATE_SERVICE_UPDATE"/>
+            </intent-filter>
+        </service>
 
         <service android:name=".ImageWallpaper"
                 android:permission="android.permission.BIND_WALLPAPER"
