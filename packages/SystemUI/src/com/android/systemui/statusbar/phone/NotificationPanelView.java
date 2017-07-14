@@ -35,6 +35,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.PowerManager;
 import android.util.AttributeSet;
+import android.util.EventLog;
 import android.util.FloatProperty;
 import android.util.MathUtils;
 import android.view.LayoutInflater;
@@ -2569,6 +2570,7 @@ public class NotificationPanelView extends PanelView implements
      */
     public boolean canCameraGestureBeLaunched(boolean keyguardIsShowing, int source) {
         if (!mStatusBar.isCameraAllowedByAdmin()) {
+            EventLog.writeEvent(0x534e4554, "63787722", -1, "");
             return false;
         }
         ResolveInfo resolveInfo = mKeyguardBottomArea.resolveCameraIntent(source);
