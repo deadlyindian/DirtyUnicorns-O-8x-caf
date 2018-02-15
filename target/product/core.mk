@@ -60,6 +60,10 @@ PRODUCT_PACKAGES += \
 # Init.d support
 PRODUCT_PACKAGES += init.d.rc
 
+# Userinit
+PRODUCT_COPY_FILES += \
+    system/core/rootdir/90userinit:system/etc/init.d/90userinit
+
 # The set of packages whose code can be loaded by the system server.
 PRODUCT_SYSTEM_SERVER_APPS += \
     FusedLocation \
