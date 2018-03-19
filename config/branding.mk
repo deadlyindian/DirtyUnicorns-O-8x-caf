@@ -12,7 +12,7 @@ ifeq ($(filter-out OFFICIAL WEEKLIES RC,$(DU_BUILD_TYPE)),)
 endif
 
 # Sign builds if building an official or weekly build
-ifeq ($(filter-out OFFICIAL WEEKLIES,$(DU_BUILD_TYPE)),)
+ifeq ($(filter-out OFFICIAL WEEKLIES UNOFFICIAL,$(DU_BUILD_TYPE)),)
     PRODUCT_DEFAULT_DEV_CERTIFICATE := ../.keys/releasekey
 endif
 
