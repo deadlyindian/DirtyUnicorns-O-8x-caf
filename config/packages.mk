@@ -35,7 +35,12 @@ PRODUCT_PACKAGES += \
     openvpn \
     e2fsck \
     mke2fs \
-    tune2fs
+    tune2fs \
+    fsck.exfat \
+    mount.exfat \
+    mkfs.ntfs \
+    mount.ntfs \
+    fsck.ntfs
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
