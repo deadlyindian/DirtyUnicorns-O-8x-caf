@@ -5,4 +5,8 @@
 
 # fsck
 /system/bin/fsck\.ntfs                          u:object_r:fsck_exec:s0
+/system/bin/fsck\.exfat                         u:object_r:fsck_exec:s0
+ 
+# mount
+/system/bin/mount\.ntfs                          u:object_r:fsck_exec:s0
 /system/bin/mount\.exfat                         u:object_r:fsck_exec:s0
