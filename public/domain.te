@@ -352,6 +352,7 @@ neverallow { domain -kernel -init -recovery -vold -zygote -update_engine -otapre
 #
 neverallow {
     domain
+    -sysinit
     -appdomain
     with_asan(`-asan_extract')
     -dumpstate
@@ -378,6 +379,7 @@ neverallow domain { cache_file cache_backup_file cache_private_backup_file cache
 # Protect most domains from executing arbitrary content from /data.
 neverallow {
   domain
+  -sysinit
   -appdomain
 } {
   data_file_type
@@ -868,6 +870,7 @@ neverallow {
   -init
   -installd # for relabelfrom and unlink, check for this in explicit neverallow
   with_asan(`-asan_extract')
+  -sysinit
 } system_data_file:file no_w_file_perms;
 # do not grant anything greater than r_file_perms and relabelfrom unlink
 # to installd

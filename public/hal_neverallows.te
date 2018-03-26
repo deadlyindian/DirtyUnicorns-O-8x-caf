@@ -16,6 +16,7 @@ neverallow {
   -hal_wifi_server
   -hal_wifi_supplicant_server
   -rild
+  -hal_gnss_default
 } domain:{ tcp_socket udp_socket rawip_socket } *;
 
 ###
