@@ -8,6 +8,4 @@ init_daemon_domain(hal_gnss_default)
 # to be able to open the hal implementation .so files
 r_dir_file(hal_gnss, system_file)
 
-allow hal_gnss_default location_data_file:dir create;
 allow hal_gnss_default location_data_file:fifo_file { create read setattr unlink write open };
-allow hal_gnss_default self:udp_socket create;
