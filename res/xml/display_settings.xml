@@ -116,6 +116,11 @@
         android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="false" />
 
+    <Preference
+        android:key="screenstate_category"
+        android:title="@string/screen_state_toggles_title" 
+        android:fragment="com.android.settings.ScreenStateToggles" />
+
     <ListPreference
         android:key="theme"
         android:title="@string/device_theme"
@@ -189,16 +194,5 @@
             android:title="@string/developer_smallest_width" />
 
     </PreferenceCategory>
-
-    <PreferenceCategory
-            android:key="screenstate_options"
-            android:title="@string/screen_state_toggles_title" >
-
-     <Preference
-        android:key="screenstate_category"
-        android:title="@string/screen_state_toggles_title" 
-        android:fragment="com.android.settings.ScreenStateToggles" />
-
-       </PreferenceCategory>
 
 </PreferenceScreen>
